@@ -7,6 +7,7 @@ const btnVolume = document.querySelector("#btn-volume");
 const btnVolumeIcon = document.querySelector("#btn-volume i");
 const playerVolume = document.querySelector("#player-volume");
 const songName = document.querySelector("#song-name");
+const songImg = document.querySelector("#song-img");
 const songAuthor = document.querySelector("#song-author");
 const playerCurrentTime = document.querySelector("#player-current-time");
 const playerDuration = document.querySelector("#player-duration");
@@ -18,15 +19,17 @@ let repeatSong = false;
 
 const songs = [ 
     {
-        name: "La Voz de tus Sentidos",
-        author: "Jannine Rada",
-        path: "./songs/La Voz de tus Sentidos - Jannine rada.mp3",
-    }
-    //   {
-    //     name: "Jazzy Abstract Beat",
-    //     author: "Coma Media",
-    //     path: "./assets/songs/Coma Media - Jazzy Abstract Beat.mp3",
-    //   },
+        name: "Until I Found You",
+        author: "Stephen Sanchez",
+        img: "./imag/Until I Found You.jpg",
+        path: "./songs/Until I Found You.mp3",
+    },
+    {
+        name: "Rude",
+        author: "MAGIC!",
+        img: "./imag/Rude.png",
+        path: "./songs/Rude.mp3",
+    },
     //   {
     //     name: "Sexy Fashion Beats",
     //     author: "Coma Media",
@@ -80,6 +83,7 @@ const updatePlayer = () => {
     const song = songs[currentSong];
 
     songName.innerHTML = song.name;
+    songImg.src = song.img;
     songAuthor.innerHTML = song.author;
     audioPlayer.src = song.path;
     playerProgress.value = audioPlayer.currentTime;
