@@ -1,12 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reproductor</title>
+  <script src="https://kit.fontawesome.com/5ce556c387.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+    <div class="reproductor" >
+        <div class="item" id="conteiner" >
+            <img id="song-img" alt="Imagen desde JSON" ></img>
+        </div>
+        <div class="item2" id="audio-player-container">
+            <div class="centrar">
+                <p id="song-name"></p>
+                <p id="song-author"></p>
+                <span id="player-current-time">00:00</span> 
+                <input id="player-progress" type="range" min="0" value="0">
+                <span id="player-duration">00:00</span>
+            </div>
+            <div class="centrar">
+                <button id="btn-prev"><i class="fas fa-backward"></i></button>
+                <button id="btn-play"><i id="btn-play-icon" class="fa-solid fa-circle-play"></i></button>
+                <button id="btn-next"><i class="fas fa-forward"></i></button>   
+            </div>
+            <div class="centrar">
+                <button id="btn-repeat"><i class="fas fa-redo"></i></button>
+                <audio id="audio-player"></audio>
+                <input id="player-volume" type="range" min="0" max="1" step="0.01" value="1">
+                <button id="btn-volume"><i class="fa-solid fa-volume-high" id="btn-volume-icon"></i></button>
+            </div>  
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
+
 </html>
